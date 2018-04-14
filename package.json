@@ -11,7 +11,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "npm run lint && echo 'no tests!'",
+    "test": "npm run lint && jest",
     "lint": "xo"
   },
   "author": "egoist <0x142857@gmail.com>",
@@ -27,7 +27,9 @@
   },
   "devDependencies": {
     "eslint-config-rem": "^3.0.0",
+    "jest": "^22.4.3",
     "webpack": "^4.5.0",
+    "webpack-chain": "^4.5.0",
     "xo": "^0.18.0"
   },
   "xo": {
@@ -35,6 +37,7 @@
     "ignores": [
       "example/**"
     ],
+    "envs": ["jest"],
     "rules": {
       "unicorn/filename-case": "off",
       "guard-for-in": "off"

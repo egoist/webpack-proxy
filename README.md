@@ -38,6 +38,16 @@ module.exports = {
 }
 ```
 
+## API
+
+### proxy(UseEntry)
+
+Return an array of [UseEntry](https://webpack.js.org/configuration/module/#useentry).
+
+### proxy.chain(Rule, UseEntry)
+
+Add UseEntry to certain [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain) rule.
+
 ## Credits
 
 Heavily inspired by Parcel bundler and preact-cli.
