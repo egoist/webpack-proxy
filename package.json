@@ -1,0 +1,41 @@
+{
+  "name": "webpack-proxy",
+  "version": "0.0.0",
+  "description": "use a webpack loader without installing it.",
+  "repository": {
+    "url": "egoist/webpack-proxy",
+    "type": "git"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "npm run lint && echo 'no tests!'",
+    "lint": "xo"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "command-exists": "^1.2.5",
+    "cross-spawn": "^6.0.5",
+    "fs-extra": "^5.0.0",
+    "json5": "^1.0.1",
+    "loader-utils": "^1.1.0",
+    "resolve": "^1.7.1"
+  },
+  "devDependencies": {
+    "eslint-config-rem": "^3.0.0",
+    "webpack": "^4.5.0",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem",
+    "ignores": ["example/**"],
+    "rules": {
+      "unicorn/filename-case": "off",
+      "guard-for-in": "off"
+    }
+  }
+}
