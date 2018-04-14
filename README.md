@@ -38,6 +38,33 @@ module.exports = {
 }
 ```
 
+## How does it work?
+
+In:
+
+```js
+proxy(yourLoader)
+```
+
+Out:
+
+```js
+[
+  {
+    loader: require.resolve('webpack-proxy/lib/proxy-loader'),
+    options: yourLoader
+  },
+  {
+    loader: require.resolve('webpack-proxy/lib/ensure-loader'),
+    options: yourLoader
+  }
+]
+```
+
+`ensure-loader` is used to install missing dependencies, `proxy-loader` is used to run your loader.
+
+webpack itself will check if your loader exists before compiling, but we want to handle this ourselves via `ensure-loader`, which is why we use `proxy-loader` here.
+
 ## API
 
 ### proxy(UseEntry)
