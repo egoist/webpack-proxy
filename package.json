@@ -1,6 +1,6 @@
 {
   "name": "webpack-proxy",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "use a webpack loader without installing it.",
   "repository": {
     "url": "egoist/webpack-proxy",
@@ -32,7 +32,9 @@
   },
   "xo": {
     "extends": "rem",
-    "ignores": ["example/**"],
+    "ignores": [
+      "example/**"
+    ],
     "rules": {
       "unicorn/filename-case": "off",
       "guard-for-in": "off"
