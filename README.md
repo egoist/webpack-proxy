@@ -13,7 +13,7 @@ yarn add webpack-proxy
 
 ## Usage
 
-Let's say you want to use `buble-loader`, you can just add it to your webpack config __without__ installing `buble-laoder` `buble`, since `webpack-proxy` will handle that for you!
+Let's say you want to use `buble-loader`, you can just add it to your webpack config __without__ installing `buble-loader` and `buble`, since `webpack-proxy` will handle that for you!
 
 📝 webpack.config.js:
 
