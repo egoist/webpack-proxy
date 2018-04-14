@@ -1,5 +1,5 @@
 const Config = require('webpack-chain')
-const proxy = require('..')
+const proxy = require('../lib')
 
 test('chain', () => {
   const config = new Config()
