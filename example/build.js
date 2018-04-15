@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const compiler = webpack(require('./webpack.config'))
 
 fs.writeFileSync('./example/package.json', '{}', 'utf8')
-
+fs.removeSync('example/node_modules')
 compiler.run((err, stats) => {
   if (err) return console.error(err)
   console.log(stats.toString({
