@@ -9,6 +9,9 @@ test('chain', () => {
     options: {
       babelrc: false
     }
+  }, {
+    version: '^1.0.0',
+    dependencies: ['lol@^2.0.1']
   })
   expect(rule.uses.has('ensure-loader')).toBe(true)
   expect(rule.uses.has('proxy-loader')).toBe(true)

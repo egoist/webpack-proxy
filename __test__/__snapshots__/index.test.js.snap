@@ -2,8 +2,11 @@
 
 exports[`chain: ensure-loader 1`] = `
 Object {
+  "dependencies": Array [
+    "lol@^2.0.1",
+  ],
   "loader": "babel-loader",
-  "version": undefined,
+  "version": "^1.0.0",
 }
 `;
 

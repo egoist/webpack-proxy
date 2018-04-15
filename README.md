@@ -58,7 +58,8 @@ Out:
     loader: require.resolve('webpack-proxy/lib/ensure-loader'),
     options: {
       loader: yourLoader.loader,
-      version: options.version
+      version: options.version,
+      dependencies: options.dependencies
     }
   }
 ]
@@ -81,6 +82,12 @@ Return an array of [UseEntry](https://webpack.js.org/configuration/module/#useen
 Type: `string`
 
 Set the version range of the missing loader to install.
+
+##### dependencies
+
+Type: `string[]`
+
+Add extra dependencies to install alongside your loader. e.g. for `sass-loader` you need to add `node-sass` to `dependencies` since it's not listed as `peerDependencies` of `sass-loader`.
 
 ### proxy.chain(Rule, UseEntry, [options])
 
