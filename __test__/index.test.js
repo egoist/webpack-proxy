@@ -12,12 +12,8 @@ test('chain', () => {
   })
   expect(rule.uses.has('ensure-loader')).toBe(true)
   expect(rule.uses.has('proxy-loader')).toBe(true)
-  config.toConfig().module.rules[0].use.forEach(use => {
-    expect(use.options).toEqual({
-      loader: 'babel-loader',
-      options: {
-        babelrc: false
-      }
-    })
-  })
+
+  for (const name in rule.uses.entries()) {
+    expect(rule.use(name).get('options')).toMatchSnapshot(name)
+  }
 })

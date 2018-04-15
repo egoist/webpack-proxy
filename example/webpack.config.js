@@ -16,6 +16,8 @@ module.exports = {
           options: {
             objectAssign: 'assign'
           }
+        }, {
+          version: '0.3.0'
         })
       }
     ]

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chain: ensure-loader 1`] = `
+Object {
+  "loader": "babel-loader",
+  "version": undefined,
+}
+`;
+
+exports[`chain: proxy-loader 1`] = `
+Object {
+  "loader": "babel-loader",
+  "options": Object {
+    "babelrc": false,
+  },
+}
+`;

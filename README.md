@@ -43,7 +43,7 @@ module.exports = {
 In:
 
 ```js
-proxy(yourLoader)
+proxy(yourLoader, options)
 ```
 
 Out:
@@ -56,7 +56,10 @@ Out:
   },
   {
     loader: require.resolve('webpack-proxy/lib/ensure-loader'),
-    options: yourLoader
+    options: {
+      loader: yourLoader.loader,
+      version: options.version
+    }
   }
 ]
 ```
@@ -67,11 +70,19 @@ webpack itself will check if your loader exists before compiling, but we want to
 
 ## API
 
-### proxy(UseEntry)
+### proxy(UseEntry, [options])
 
 Return an array of [UseEntry](https://webpack.js.org/configuration/module/#useentry).
 
-### proxy.chain(Rule, UseEntry)
+#### options
+
+##### version
+
+Type: `string`
+
+Set the version range of the missing loader to install.
+
+### proxy.chain(Rule, UseEntry, [options])
 
 Add UseEntry to certain [webpack-chain](https://github.com/mozilla-neutrino/webpack-chain) rule.
 
