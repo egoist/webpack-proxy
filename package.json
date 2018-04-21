@@ -17,8 +17,6 @@
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "buble": "^0.13.0",
-    "buble-loader": "0.3.0",
     "chalk": "^2.3.2",
     "cross-spawn": "^6.0.5",
     "install-packages": "^0.1.0",
