@@ -92,7 +92,7 @@ Add extra dependencies to install alongside your loader. e.g. for `sass-loader` 
 
 ##### peerFilter
 
-Type: `(depName: string) => boolean`
+Type: `(depName: string, version: string) => boolean`
 
 Filter peer dependencies, return `true` to include, `false` otherwise.
 
