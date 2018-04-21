@@ -59,7 +59,8 @@ Out:
     options: {
       loader: yourLoader.loader,
       version: options.version,
-      dependencies: options.dependencies
+      dependencies: options.dependencies,
+      peerFilter: options.peerFilter
     }
   }
 ]
@@ -88,6 +89,12 @@ Set the version range of the missing loader to install.
 Type: `string[]`
 
 Add extra dependencies to install alongside your loader. e.g. for `sass-loader` you need to add `node-sass` to `dependencies` since it's not listed as `peerDependencies` of `sass-loader`.
+
+##### peerFilter
+
+Type: `(depName: string) => boolean`
+
+Filter peer dependencies, return `true` to include, `false` otherwise.
 
 ### proxy.chain(Rule, UseEntry, [options])
 
