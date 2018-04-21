@@ -1,6 +1,6 @@
 {
   "name": "webpack-proxy",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "use a webpack loader without installing it.",
   "repository": {
     "url": "egoist/webpack-proxy",
